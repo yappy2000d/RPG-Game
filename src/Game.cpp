@@ -11,12 +11,13 @@ Game::Game(const string& username, const string& password) {
     this->password = to_string(hasher(password));
 
     // Login
-    if(login() == LoginStatus::SUCCESS) {
-        cout << "Login Success!" << endl;
-    } else {
+    while(login() == LoginStatus::FAILED) {
         cout << "Login Failed!" << endl;
-        exit(0);
+        cout << "User Name:", cin >> this->username;
+        cout << "Password:",  cin >> this->password;
+        this->password = to_string(hasher(this->password));
     }
+    cout << "Login Success!" << endl;
 
     selectCharacter();
 }
@@ -52,9 +53,6 @@ void Game::selectCharacter() {
         cout << "[" << i++ << "] " << characterPath << endl;
         characters.push_back(characterPath);
     }
-
-    // 去除 . 和 .. 的路徑
-    //characters.erase(characters.begin(), characters.begin() + 3);
 
     int select;
     while(true) {
