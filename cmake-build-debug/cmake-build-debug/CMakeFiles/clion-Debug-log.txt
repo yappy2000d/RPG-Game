@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\user\Documents\GitHub\RPG-Game\cmake-build-debug Select CMakeLists.txt
