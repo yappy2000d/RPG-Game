@@ -1,3 +1,0 @@
-/workspaces/RPG-Game/cmake-build-debug/CMakeFiles/Final-Project-OOP.dir
-/workspaces/RPG-Game/cmake-build-debug/CMakeFiles/edit_cache.dir
-/workspaces/RPG-Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
