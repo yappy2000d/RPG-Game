@@ -1,0 +1,11 @@
+{
+  "name":"Castle",
+  "display_name":"城堡",
+  "west":null,
+  "east":null,
+  "north":"TownCenter",
+  "south":null,
+  "mobs": {
+
+  }
+}

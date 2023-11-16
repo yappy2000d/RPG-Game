@@ -1,0 +1,11 @@
+{
+  "name":"Sawmill",
+  "display_name":"伐木場",
+  "west":null,
+  "east":"TownCenter",
+  "north":"BlackForest",
+  "south":null,
+  "mobs": {
+
+  }
+}

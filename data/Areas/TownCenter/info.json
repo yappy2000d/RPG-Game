@@ -1,0 +1,11 @@
+{
+  "name":"TownCenter",
+  "display_name":"城鎮中心",
+  "west":"Sawmill",
+  "east":"Market",
+  "north":"Suburbs",
+  "south":"Castle",
+  "mobs": {
+
+  }
+}

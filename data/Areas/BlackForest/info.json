@@ -1,0 +1,12 @@
+{
+  "name":"BlackForest",
+  "display_name":"黑森林",
+  "west":null,
+  "east":"Suburbs",
+  "north":null,
+  "south":"Sawmill",
+  "mobs": {
+    "1": "Baboon",
+    "2": "Thief"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name":"Caves",
+  "display_name":"洞穴",
+  "west":"Suburbs",
+  "east":null,
+  "north":null,
+  "south":"Market",
+  "mobs": {
+
+  }
+}

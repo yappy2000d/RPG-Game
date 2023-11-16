@@ -1,0 +1,11 @@
+{
+  "name":"Suburbs",
+  "display_name":"郊外草原",
+  "west":"BlackForest",
+  "east":"Caves",
+  "north":null,
+  "south":"TownCenter",
+  "mobs": {
+
+  }
+}

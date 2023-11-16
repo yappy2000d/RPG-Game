@@ -1,0 +1,11 @@
+{
+  "name":"Market",
+  "display_name":"市集",
+  "west":"TownCenter",
+  "east":null,
+  "north":"Caves",
+  "south":null,
+  "mobs": {
+
+  }
+}
