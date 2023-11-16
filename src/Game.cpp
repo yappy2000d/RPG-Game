@@ -26,7 +26,7 @@ LoginStatus Game::login() {
 
     fs::path str("./data/Accounts/");
 
-    if(!fs::exists(str / username)) {
+    if(!fs::exists(str / this->username)) {
         return LoginStatus::FAILED;
     }
 
@@ -40,33 +40,34 @@ LoginStatus Game::login() {
 }
 
 void Game::selectCharacter() {
+
     fs::path str("./data/Accounts/");
 
-    fs::directory_iterator list(str / username / "Characters/");
+    fs::directory_iterator list(str / this->username / "Characters/");
 
     vector<fs::path> characters;
-    fs::path characterPath;
+    fs::path charPath;
 
     int i = 0;
     for(auto& p: list) {
-        characterPath = p.path().filename();
-        cout << "[" << i++ << "] " << characterPath << endl;
-        characters.push_back(characterPath);
+        charPath = p.path().filename();
+        cout << "[" << i++ << "] " << charPath.string() << endl;
+        characters.push_back(charPath);
     }
 
     int select;
     while(true) {
         cout << "請選擇角色(-1:刪除角色, -2:創建角色): ", cin >> select;
         if(select == -2) {
+            // createCharacter();
             break;
         } else if(select == -1) {
             // deleteCharacter();
             continue;
         } else {
             try {
-                characterPath = characters.at(select);
-                cout << characters.size() << endl;
-                cout << "選擇角色: " << characterPath << endl;
+                charPath = characters.at(select);
+                loadCharacter(charPath);
                 break;
             } catch (const out_of_range& e) {
                 cout << "輸入錯誤，請重新輸入!" << endl;
@@ -74,4 +75,20 @@ void Game::selectCharacter() {
             }
         }
     }
+}
+
+void Game::createCharacter() {
+
+}
+
+void Game::deleteCharacter() {
+
+}
+
+void Game::loadCharacter(const fs::path &charPath) {
+    fs::path str("./data/Accounts/");
+    this->characterPath = str / this->username / "Characters" / charPath / "character.json";
+    this->character = make_unique<Character>(this->characterPath);
+
+    this->character->printInfo();
 }

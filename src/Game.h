@@ -5,14 +5,6 @@
 #ifndef FINAL_PROJECT_OOP_GAME_H
 #define FINAL_PROJECT_OOP_GAME_H
 
-#include <iostream>
-#include <string>
-#include <unordered_map>
-#include <filesystem>
-#include <fstream>
-#include <memory>
-
-#include "include/nlohmann/json.hpp"
 #include "GameObject/Entity/Character/Character.h"
 
 using namespace std;
@@ -29,8 +21,12 @@ public:
     Game(const string& username, const string& password);
     LoginStatus login();
     void selectCharacter();
+    void createCharacter();
+    void deleteCharacter();
+    void loadCharacter(const fs::path& path);
 
 private:
+    fs::path characterPath;
     string username;
     string password;
     unique_ptr<Character> character;
