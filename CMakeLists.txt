@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.26.4)
-project(Final-Project-OOP)
+project(RPG-Game)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
@@ -19,5 +19,5 @@ set(SrcFile
         src/Game.cpp
         src/Game.h
 )
-add_executable(Final-Project-OOP ${SrcFile})
+add_executable(RPG-Game ${SrcFile})
 set_target_properties(${PROJECT_NAME} PROPERTIES OUTPUT_NAME "app")
