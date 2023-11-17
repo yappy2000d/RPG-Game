@@ -7,8 +7,8 @@
  * Description: This program defines the structure Position.
  *********************************************************************/
 
-#ifndef POSITION_H
-#define POSITION_H
+#ifndef POSITION_HPP_
+#define POSITION_HPP_
 
 #include <cmath>
 #include <vector>
