@@ -5,7 +5,7 @@
 
 OOP Final Project
 
-## Run in CodeSpace
+## Running on CodeSpace
 
 ```bash
 cmake --version
@@ -20,4 +20,15 @@ cmake --version
 
 cmake .
 cmake --build .
+```
+
+## Running on Windows
+install following dependent packages by Cygwin:
++ gcc-g++ 11.4.0-1
++ cmake 3.25.3-1
++ make 4.4.1-2 (TBC)
+
+```batch
+cmake -S . -B Build
+cmake --build Build
 ```
