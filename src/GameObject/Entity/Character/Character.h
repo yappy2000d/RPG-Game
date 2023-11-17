@@ -15,10 +15,8 @@ public:
     friend ostream& operator<<(ostream& os, const Character& character);
 
 protected:
-    // 剩餘屬性點
-    int skillPoint; // 剩餘技能點
-
-    int attrPoint;
+    int skillPoint;   // 剩餘技能點
+    int attrPoint;    // 剩餘屬性點
 };
 
 

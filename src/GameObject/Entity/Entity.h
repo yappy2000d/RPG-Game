@@ -18,8 +18,8 @@ public:
 protected:
     string name;    // 名稱
     int level;      // 等級
-    int coin;       // 擁有的金幣
-    int exp;        // 當前經驗值
+    int coin;       // 擁有的金幣 | 殺死可獲得的金幣
+    int exp;        // 當前經驗值 | 殺死可獲得的經驗
     int hp;         // 當前血量
     int maxHp;      // 最大血量
     int mp;         // 當前魔力
