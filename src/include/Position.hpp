@@ -30,6 +30,13 @@ struct Position {
 	bool operator==(const Position& pos) const { return (x == pos.x) && (y == pos.y); }
 	Position operator+(const Position& pos) const { return {x + pos.x, y + pos.y}; }
 	Position operator-(const Position& pos) const { return {x - pos.x, y - pos.y}; }
+
+
+    // overload operator to print Position (Author: LSweetSour)
+    friend std::ostream& operator<<(std::ostream& os, const Position& pos) {
+        os << "(" << pos.x << ", " << pos.y << ")";
+        return os;
+    }
 };
 
 #endif

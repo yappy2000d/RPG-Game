@@ -11,11 +11,14 @@
 class Character: public Entity{
 public:
     Character(string& name, int level, int hp, int maxHp, int mp, int maxMp, int atk, int mag, int def, int coin, int exp, int attrPoint, int skillPoint);
-    Character(const fs::path& path);
-    int attrPoint;  // 剩餘屬性點
+    explicit Character(const fs::path& path);
+    friend ostream& operator<<(ostream& os, const Character& character);
+
+protected:
+    // 剩餘屬性點
     int skillPoint; // 剩餘技能點
 
-    void printInfo() override;
+    int attrPoint;
 };
 
 

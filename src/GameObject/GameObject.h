@@ -27,7 +27,10 @@ using std::endl;
 class GameObject {
 public:
     GameObject() = default;
-    GameObject(const fs::path& path);
+    explicit GameObject(const fs::path& path);
+    friend ostream& operator<<(ostream& os, const GameObject& obj);
+
+protected:
     string area;
     Position pos;
 };

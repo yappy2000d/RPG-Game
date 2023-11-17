@@ -4,6 +4,8 @@
 
 #include "Game.h"
 
+#include <memory>
+
 Game::Game(const string& username, const string& password) {
     hash<string> hasher;
 
@@ -78,7 +80,7 @@ void Game::selectCharacter() {
 }
 
 void Game::createCharacter() {
-
+    // character.save();
 }
 
 void Game::deleteCharacter() {
@@ -88,7 +90,7 @@ void Game::deleteCharacter() {
 void Game::loadCharacter(const fs::path &charPath) {
     fs::path str("./data/Accounts/");
     this->characterPath = str / this->username / "Characters" / charPath / "character.json";
-    this->character = make_unique<Character>(this->characterPath);
+    this->character = std::make_unique<Character> (this->characterPath);
 
-    this->character->printInfo();
+    cout << *this->character << endl;
 }

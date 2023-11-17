@@ -3,6 +3,7 @@
 //
 
 #include "GameObject.h"
+
 GameObject::GameObject(const fs::path& path) {
     try {
         fstream j_file(path, ios::in);
@@ -19,4 +20,10 @@ GameObject::GameObject(const fs::path& path) {
         cout << "GameObject error: ";
         cout << e.what() << endl;
     }
+}
+
+ostream& operator<<(ostream& os, const GameObject& obj) {
+    os << "Area: " << obj.area << endl;
+    os << "Position: " << obj.pos << endl;
+    return os;
 }

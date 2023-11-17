@@ -38,3 +38,18 @@ Entity::Entity(const fs::path& path): GameObject(path) {
         cout << e.what() << endl;
     }
 }
+
+ostream& operator<<(ostream& os, const Entity& entity) {
+    operator<<(os, (const GameObject&) entity);
+    os << "Name: " << entity.name << endl;
+    os << "Level: " << entity.level << endl;
+    os << "HP: " << entity.hp << "/" << entity.maxHp << endl;
+    os << "MP: " << entity.mp << "/" << entity.maxMp << endl;
+    os << "ATK: " << entity.atk << endl;
+    os << "MAG: " << entity.mag << endl;
+    os << "DEF: " << entity.def << endl;
+    os << "Coin: " << entity.coin << endl;
+    os << "Exp: " << entity.exp << endl;
+    os << "Position: " << entity.pos << endl;
+    return os;
+}
