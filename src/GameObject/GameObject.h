@@ -12,8 +12,8 @@
 #include <fstream>
 #include <memory>
 
-#include "../include/nlohmann/json.hpp"
-#include "../include/Position.h"
+#include <nlohmann/json.hpp>
+#include <Position.hpp>
 
 
 using namespace std;
