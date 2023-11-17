@@ -1,6 +1,7 @@
 # RPG-Game
-![CMake](https://img.shields.io/badge/CMake3.26.4-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
-![C++](https://img.shields.io/badge/c++17-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+
+![CMake](https://img.shields.io/badge/cmake%203.26.4-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white)
+![C++](https://img.shields.io/badge/c++%2017-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 OOP Final Project
 
