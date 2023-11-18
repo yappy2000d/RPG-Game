@@ -12,6 +12,7 @@ class Character: public Entity{
 public:
     Character(string& name, int level, int hp, int maxHp, int mp, int maxMp, int atk, int mag, int def, int coin, int exp, int attrPoint, int skillPoint);
     explicit Character(const fs::path& path);
+    void save(const fs::path& path);
     friend ostream& operator<<(ostream& os, const Character& character);
 
 protected:

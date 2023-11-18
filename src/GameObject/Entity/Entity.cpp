@@ -53,3 +53,7 @@ ostream& operator<<(ostream& os, const Entity& entity) {
     os << "Position: " << entity.pos << endl;
     return os;
 }
+
+void Entity::save(const fs::path &path) {
+    cout << "Entity save" << endl;
+}

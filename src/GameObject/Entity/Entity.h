@@ -12,6 +12,7 @@ class Entity: public GameObject {
 public:
     Entity(string& name, int level, int hp, int maxHp, int mp, int maxMp, int atk, int mag, int def, int coin, int exp);
     explicit Entity(const fs::path& path);
+    void save(const fs::path& path);
 
     friend ostream& operator<<(ostream& os, const Entity& entity);
 

@@ -61,7 +61,7 @@ void Game::selectCharacter() {
     while(true) {
         cout << "請選擇角色(-1:刪除角色, -2:創建角色): ", cin >> select;
         if(select == -2) {
-            // createCharacter();
+            createCharacter();
             break;
         } else if(select == -1) {
             // deleteCharacter();
@@ -80,7 +80,8 @@ void Game::selectCharacter() {
 }
 
 void Game::createCharacter() {
-    // character.save();
+    this->character = std::make_unique<Character> (this->username);
+    this->character->save("./data/Accounts/" + this->username + "/Characters/");
 }
 
 void Game::deleteCharacter() {
