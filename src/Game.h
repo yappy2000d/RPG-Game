@@ -12,8 +12,8 @@ using json = nlohmann::json;
 namespace fs = std::filesystem;
 
 enum class LoginStatus {
-    SUCCESS,
-    FAILED
+    FAILED,
+    SUCCESS
 };
 
 class Game {
@@ -26,7 +26,6 @@ public:
     void loadCharacter(const fs::path& path);
 
 private:
-    fs::path characterPath;
     string username;
     string password;
     unique_ptr<Character> character;

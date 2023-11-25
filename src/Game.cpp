@@ -80,8 +80,16 @@ void Game::selectCharacter() {
 }
 
 void Game::createCharacter() {
-    this->character = std::make_unique<Character> (this->username);
-    this->character->save("./data/Accounts/" + this->username + "/Characters/");
+    fs::path str("./data/Accounts/");
+    fs::directory_iterator list(str / this->username / "Characters");
+
+    if(distance(list, fs::directory_iterator{}) < 3) {
+        cout << "角色名稱: ", cin >> this->username;
+        //this->character = std::make_unique<Character> (this->username);
+        this->character->save("./data/Accounts/" + this->username + "/Characters/");
+    } else {
+        cout << "角色數量已達上限!" << endl;
+    }
 }
 
 void Game::deleteCharacter() {
@@ -90,8 +98,8 @@ void Game::deleteCharacter() {
 
 void Game::loadCharacter(const fs::path &charPath) {
     fs::path str("./data/Accounts/");
-    this->characterPath = str / this->username / "Characters" / charPath / "character.json";
-    this->character = std::make_unique<Character> (this->characterPath);
+    fs::path characterPath = str / this->username / "Characters" / charPath / "character.json";
+    this->character = std::make_unique<Character> (characterPath);
 
     cout << *this->character << endl;
 }
