@@ -1,0 +1,48 @@
+{
+    "AttrPoint": 10,
+    "SkillPoint": 2,
+    "attributes": {
+      "Name": "oOSweetOo",
+      "Level": 3,
+      "Exp": 5201314,
+      "HP": 566,
+      "MP": 100,
+      "ATK": 20,
+      "MAG": 5,
+      "DEF": 6,
+      "MaxHP": 500,
+      "MaxMP": 400,
+      "Coin": 5487
+    },
+    "inventory": [
+      {
+        "id": "item1",
+        "count": 1
+      },
+      {
+        "id": "item2",
+        "count": 2
+      }
+    ],
+    "location": {
+      "area": "TownCenter",
+      "pos": [
+        20,
+        16
+      ]
+    },
+    "mission": [
+      "mission1",
+      "mission2"
+    ],
+    "skill": [
+      {
+        "id": "skill1",
+        "level": 1
+      },
+      {
+        "id": "skill2",
+        "level": 2
+      }
+    ]
+  }
